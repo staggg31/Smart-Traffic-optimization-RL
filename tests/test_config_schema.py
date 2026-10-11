@@ -298,6 +298,52 @@ class TestIntersectionConfig(unittest.TestCase):
                 clearance_handled_by_sumo="True",  # type: ignore
             )
 
+    def test_valid_and_invalid_exit_lanes(self) -> None:
+        """Verify exit_lanes validation behavior."""
+        # Valid exit lanes
+        cfg = IntersectionConfig(
+            tls_id="C",
+            incoming_lanes=["N_in_0"],
+            green_phase_indices=[0],
+            min_green_seconds=10.0,
+            max_green_seconds=30.0,
+            exit_lanes=["N_out_0", "S_out_0"],
+        )
+        self.assertEqual(cfg.exit_lanes, ["N_out_0", "S_out_0"])
+
+        # Empty list
+        with self.assertRaises(ValueError):
+            IntersectionConfig(
+                tls_id="C",
+                incoming_lanes=["N_in_0"],
+                green_phase_indices=[0],
+                min_green_seconds=10.0,
+                max_green_seconds=30.0,
+                exit_lanes=[],
+            )
+
+        # Blank lane ID
+        with self.assertRaises(ValueError):
+            IntersectionConfig(
+                tls_id="C",
+                incoming_lanes=["N_in_0"],
+                green_phase_indices=[0],
+                min_green_seconds=10.0,
+                max_green_seconds=30.0,
+                exit_lanes=[""],
+            )
+
+        # Duplicate exit lanes
+        with self.assertRaises(ValueError):
+            IntersectionConfig(
+                tls_id="C",
+                incoming_lanes=["N_in_0"],
+                green_phase_indices=[0],
+                min_green_seconds=10.0,
+                max_green_seconds=30.0,
+                exit_lanes=["N_out_0", "N_out_0"],
+            )
+
 
 class TestBaseTrafficController(unittest.TestCase):
     """Test suite for BaseTrafficController abstraction."""

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+    <vType id="car" vClass="passenger" accel="2.6" decel="4.5" sigma="0.5" length="5.0" maxSpeed="13.89" />
+    <route id="route_N_in_S_out" edges="N_in S_out" />
+    <route id="route_N_in_W_out" edges="N_in W_out" />
+    <route id="route_N_in_E_out" edges="N_in E_out" />
+    <route id="route_S_in_N_out" edges="S_in N_out" />
+    <route id="route_S_in_E_out" edges="S_in E_out" />
+    <route id="route_S_in_W_out" edges="S_in W_out" />
+    <route id="route_E_in_W_out" edges="E_in W_out" />
+    <route id="route_E_in_N_out" edges="E_in N_out" />
+    <route id="route_E_in_S_out" edges="E_in S_out" />
+    <route id="route_W_in_E_out" edges="W_in E_out" />
+    <route id="route_W_in_S_out" edges="W_in S_out" />
+    <route id="route_W_in_N_out" edges="W_in N_out" />
+    <vehicle id="S_in_W_out_1" type="car" route="route_S_in_W_out" depart="1.15" />
+    <vehicle id="E_in_W_out_5" type="car" route="route_E_in_W_out" depart="17.06" />
+    <vehicle id="W_in_N_out_6" type="car" route="route_W_in_N_out" depart="18.12" />
+    <vehicle id="S_in_N_out_2" type="car" route="route_S_in_N_out" depart="31.17" />
+    <vehicle id="S_in_W_out_3" type="car" route="route_S_in_W_out" depart="32.89" />
+    <vehicle id="S_in_E_out_4" type="car" route="route_S_in_E_out" depart="33.14" />
+    <vehicle id="N_in_S_out_0" type="car" route="route_N_in_S_out" depart="40.16" />
+    <vehicle id="W_in_E_out_7" type="car" route="route_W_in_E_out" depart="44.87" />
+</routes>

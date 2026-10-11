@@ -126,14 +126,15 @@ class SumoEnvironment:
         self._max_steps: int = int(max_steps)
         self._additional_sumo_args: List[str] = list(additional_sumo_args) if additional_sumo_args else []
 
-        # Validate exit lanes
-        if exit_lanes is not None:
-            if not isinstance(exit_lanes, list) or len(exit_lanes) == 0:
+        # Validate exit lanes (accept explicit override or fallback to config.exit_lanes)
+        resolved_exit_lanes = exit_lanes if exit_lanes is not None else getattr(config, "exit_lanes", None)
+        if resolved_exit_lanes is not None:
+            if not isinstance(resolved_exit_lanes, list) or len(resolved_exit_lanes) == 0:
                 raise ValueError("exit_lanes must be a non-empty list of lane IDs.")
-            for lane in exit_lanes:
+            for lane in resolved_exit_lanes:
                 if not isinstance(lane, str) or not lane.strip():
                     raise ValueError("All entries in exit_lanes must be non-empty strings.")
-            self._exit_lanes: List[str] = list(exit_lanes)
+            self._exit_lanes: List[str] = list(resolved_exit_lanes)
         else:
             self._exit_lanes = []
 
@@ -184,6 +185,16 @@ class SumoEnvironment:
         return self._current_step
 
     @property
+    def config(self) -> IntersectionConfig:
+        """Configured intersection configuration."""
+        return self._config
+
+    @property
+    def obs_builder(self) -> ObservationBuilder:
+        """Configured observation builder."""
+        return self._obs_builder
+
+    @property
     def delta_time(self) -> float:
         """Control interval in seconds."""
         return self._delta_time
@@ -192,6 +203,7 @@ class SumoEnvironment:
     def clearance_sequences(self) -> Dict[Tuple[int, int], List[ClearanceStep]]:
         """Active clearance sequences mapping `(from_green, to_green) -> list[ClearanceStep]`."""
         return dict(self._clearance_sequences)
+
 
     def _resolve_sumo_binary(self) -> str:
         """Resolve path to SUMO or SUMO-GUI executable."""
@@ -216,8 +228,19 @@ class SumoEnvironment:
         """Get the TraCI module (injected or dynamically imported)."""
         if self._traci is not None:
             return self._traci
-        import traci
-        return traci
+        try:
+            import traci
+            return traci
+        except ImportError:
+            sumo_home = os.environ.get("SUMO_HOME")
+            if sumo_home:
+                tools = os.path.join(sumo_home, "tools")
+                if tools not in sys.path:
+                    sys.path.append(tools)
+                import traci
+                return traci
+            raise
+
 
     def _extract_clearance_sequences_from_sumo(self, traci: Any) -> Dict[Tuple[int, int], List[ClearanceStep]]:
         """Extract legal clearance sequences between green phases from SUMO's loaded tlLogic."""

@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+    <vType id="car" vClass="passenger" accel="2.6" decel="4.5" sigma="0.5" length="5.0" maxSpeed="13.89" />
+    <route id="route_N_in_S_out" edges="N_in S_out" />
+    <route id="route_N_in_W_out" edges="N_in W_out" />
+    <route id="route_N_in_E_out" edges="N_in E_out" />
+    <route id="route_S_in_N_out" edges="S_in N_out" />
+    <route id="route_S_in_E_out" edges="S_in E_out" />
+    <route id="route_S_in_W_out" edges="S_in W_out" />
+    <route id="route_E_in_W_out" edges="E_in W_out" />
+    <route id="route_E_in_N_out" edges="E_in N_out" />
+    <route id="route_E_in_S_out" edges="E_in S_out" />
+    <route id="route_W_in_E_out" edges="W_in E_out" />
+    <route id="route_W_in_S_out" edges="W_in S_out" />
+    <route id="route_W_in_N_out" edges="W_in N_out" />
+    <vehicle id="W_in_E_out_84" type="car" route="route_W_in_E_out" depart="0.20" />
+    <vehicle id="W_in_S_out_85" type="car" route="route_W_in_S_out" depart="3.28" />
+    <vehicle id="S_in_N_out_31" type="car" route="route_S_in_N_out" depart="5.29" />
+    <vehicle id="W_in_S_out_86" type="car" route="route_W_in_S_out" depart="5.58" />
+    <vehicle id="N_in_E_out_0" type="car" route="route_N_in_E_out" depart="5.63" />
+    <vehicle id="W_in_N_out_87" type="car" route="route_W_in_N_out" depart="11.45" />
+    <vehicle id="W_in_E_out_88" type="car" route="route_W_in_E_out" depart="13.22" />
+    <vehicle id="W_in_N_out_89" type="car" route="route_W_in_N_out" depart="14.67" />
+    <vehicle id="S_in_N_out_32" type="car" route="route_S_in_N_out" depart="14.68" />
+    <vehicle id="E_in_S_out_59" type="car" route="route_E_in_S_out" depart="19.77" />
+    <vehicle id="N_in_S_out_1" type="car" route="route_N_in_S_out" depart="21.43" />
+    <vehicle id="N_in_S_out_2" type="car" route="route_N_in_S_out" depart="23.47" />
+    <vehicle id="N_in_E_out_3" type="car" route="route_N_in_E_out" depart="24.19" />
+    <vehicle id="E_in_W_out_60" type="car" route="route_E_in_W_out" depart="24.36" />
+    <vehicle id="E_in_W_out_61" type="car" route="route_E_in_W_out" depart="27.47" />
+    <vehicle id="S_in_N_out_33" type="car" route="route_S_in_N_out" depart="34.13" />
+    <vehicle id="N_in_W_out_4" type="car" route="route_N_in_W_out" depart="35.21" />
+    <vehicle id="N_in_E_out_5" type="car" route="route_N_in_E_out" depart="35.46" />
+    <vehicle id="W_in_E_out_90" type="car" route="route_W_in_E_out" depart="39.85" />
+    <vehicle id="E_in_S_out_62" type="car" route="route_E_in_S_out" depart="47.91" />
+    <vehicle id="E_in_W_out_63" type="car" route="route_E_in_W_out" depart="47.99" />
+    <vehicle id="W_in_N_out_91" type="car" route="route_W_in_N_out" depart="52.80" />
+    <vehicle id="E_in_W_out_64" type="car" route="route_E_in_W_out" depart="54.48" />
+    <vehicle id="E_in_W_out_65" type="car" route="route_E_in_W_out" depart="56.01" />
+    <vehicle id="N_in_S_out_6" type="car" route="route_N_in_S_out" depart="56.90" />
+    <vehicle id="N_in_S_out_7" type="car" route="route_N_in_S_out" depart="59.31" />
+    <vehicle id="W_in_E_out_92" type="car" route="route_W_in_E_out" depart="62.52" />
+    <vehicle id="N_in_S_out_8" type="car" route="route_N_in_S_out" depart="63.66" />
+    <vehicle id="W_in_E_out_93" type="car" route="route_W_in_E_out" depart="65.84" />
+    <vehicle id="N_in_S_out_9" type="car" route="route_N_in_S_out" depart="70.45" />
+    <vehicle id="N_in_S_out_10" type="car" route="route_N_in_S_out" depart="81.81" />
+    <vehicle id="N_in_S_out_11" type="car" route="route_N_in_S_out" depart="85.95" />
+    <vehicle id="S_in_E_out_34" type="car" route="route_S_in_E_out" depart="86.14" />
+    <vehicle id="S_in_N_out_35" type="car" route="route_S_in_N_out" depart="88.80" />
+    <vehicle id="E_in_W_out_66" type="car" route="route_E_in_W_out" depart="90.37" />
+    <vehicle id="W_in_N_out_94" type="car" route="route_W_in_N_out" depart="93.14" />
+    <vehicle id="N_in_W_out_12" type="car" route="route_N_in_W_out" depart="93.26" />
+    <vehicle id="N_in_S_out_13" type="car" route="route_N_in_S_out" depart="95.93" />
+    <vehicle id="E_in_N_out_67" type="car" route="route_E_in_N_out" depart="99.15" />
+    <vehicle id="E_in_S_out_68" type="car" route="route_E_in_S_out" depart="104.57" />
+    <vehicle id="W_in_E_out_95" type="car" route="route_W_in_E_out" depart="105.17" />
+    <vehicle id="N_in_S_out_14" type="car" route="route_N_in_S_out" depart="106.70" />
+    <vehicle id="S_in_E_out_36" type="car" route="route_S_in_E_out" depart="109.08" />
+    <vehicle id="W_in_S_out_96" type="car" route="route_W_in_S_out" depart="110.33" />
+    <vehicle id="N_in_S_out_15" type="car" route="route_N_in_S_out" depart="117.93" />
+    <vehicle id="N_in_E_out_16" type="car" route="route_N_in_E_out" depart="118.73" />
+    <vehicle id="S_in_E_out_37" type="car" route="route_S_in_E_out" depart="124.74" />
+    <vehicle id="S_in_N_out_38" type="car" route="route_S_in_N_out" depart="125.67" />
+    <vehicle id="S_in_W_out_39" type="car" route="route_S_in_W_out" depart="127.15" />
+    <vehicle id="W_in_N_out_97" type="car" route="route_W_in_N_out" depart="137.62" />
+    <vehicle id="S_in_N_out_40" type="car" route="route_S_in_N_out" depart="138.86" />
+    <vehicle id="S_in_N_out_41" type="car" route="route_S_in_N_out" depart="139.65" />
+    <vehicle id="E_in_W_out_69" type="car" route="route_E_in_W_out" depart="143.95" />
+    <vehicle id="S_in_E_out_42" type="car" route="route_S_in_E_out" depart="144.37" />
+    <vehicle id="E_in_W_out_70" type="car" route="route_E_in_W_out" depart="152.20" />
+    <vehicle id="W_in_S_out_98" type="car" route="route_W_in_S_out" depart="155.78" />
+    <vehicle id="E_in_W_out_71" type="car" route="route_E_in_W_out" depart="156.23" />
+    <vehicle id="S_in_W_out_43" type="car" route="route_S_in_W_out" depart="156.55" />
+    <vehicle id="W_in_E_out_99" type="car" route="route_W_in_E_out" depart="156.83" />
+    <vehicle id="N_in_E_out_17" type="car" route="route_N_in_E_out" depart="159.18" />
+    <vehicle id="N_in_S_out_18" type="car" route="route_N_in_S_out" depart="163.54" />
+    <vehicle id="S_in_N_out_44" type="car" route="route_S_in_N_out" depart="164.22" />
+    <vehicle id="E_in_W_out_72" type="car" route="route_E_in_W_out" depart="167.51" />
+    <vehicle id="E_in_W_out_73" type="car" route="route_E_in_W_out" depart="168.15" />
+    <vehicle id="N_in_S_out_19" type="car" route="route_N_in_S_out" depart="177.37" />
+    <vehicle id="N_in_S_out_20" type="car" route="route_N_in_S_out" depart="178.93" />
+    <vehicle id="S_in_E_out_45" type="car" route="route_S_in_E_out" depart="179.21" />
+    <vehicle id="N_in_E_out_21" type="car" route="route_N_in_E_out" depart="179.35" />
+    <vehicle id="N_in_W_out_22" type="car" route="route_N_in_W_out" depart="182.95" />
+    <vehicle id="W_in_S_out_100" type="car" route="route_W_in_S_out" depart="184.29" />
+    <vehicle id="W_in_E_out_101" type="car" route="route_W_in_E_out" depart="184.40" />
+    <vehicle id="N_in_S_out_23" type="car" route="route_N_in_S_out" depart="187.43" />
+    <vehicle id="S_in_E_out_46" type="car" route="route_S_in_E_out" depart="189.09" />
+    <vehicle id="E_in_W_out_74" type="car" route="route_E_in_W_out" depart="196.81" />
+    <vehicle id="N_in_S_out_24" type="car" route="route_N_in_S_out" depart="196.93" />
+    <vehicle id="S_in_N_out_47" type="car" route="route_S_in_N_out" depart="197.26" />
+    <vehicle id="W_in_E_out_102" type="car" route="route_W_in_E_out" depart="197.47" />
+    <vehicle id="E_in_W_out_75" type="car" route="route_E_in_W_out" depart="198.69" />
+    <vehicle id="W_in_E_out_103" type="car" route="route_W_in_E_out" depart="199.58" />
+    <vehicle id="S_in_N_out_48" type="car" route="route_S_in_N_out" depart="203.96" />
+    <vehicle id="S_in_N_out_49" type="car" route="route_S_in_N_out" depart="205.33" />
+    <vehicle id="W_in_S_out_104" type="car" route="route_W_in_S_out" depart="213.71" />
+    <vehicle id="W_in_S_out_105" type="car" route="route_W_in_S_out" depart="216.75" />
+    <vehicle id="S_in_N_out_50" type="car" route="route_S_in_N_out" depart="217.47" />
+    <vehicle id="W_in_E_out_106" type="car" route="route_W_in_E_out" depart="220.00" />
+    <vehicle id="S_in_W_out_51" type="car" route="route_S_in_W_out" depart="225.99" />
+    <vehicle id="S_in_N_out_52" type="car" route="route_S_in_N_out" depart="229.43" />
+    <vehicle id="W_in_S_out_107" type="car" route="route_W_in_S_out" depart="236.47" />
+    <vehicle id="N_in_W_out_25" type="car" route="route_N_in_W_out" depart="238.84" />
+    <vehicle id="S_in_N_out_53" type="car" route="route_S_in_N_out" depart="246.34" />
+    <vehicle id="S_in_N_out_54" type="car" route="route_S_in_N_out" depart="247.30" />
+    <vehicle id="S_in_W_out_55" type="car" route="route_S_in_W_out" depart="249.41" />
+    <vehicle id="E_in_W_out_76" type="car" route="route_E_in_W_out" depart="249.62" />
+    <vehicle id="W_in_S_out_108" type="car" route="route_W_in_S_out" depart="259.17" />
+    <vehicle id="E_in_N_out_77" type="car" route="route_E_in_N_out" depart="263.00" />
+    <vehicle id="E_in_N_out_78" type="car" route="route_E_in_N_out" depart="266.26" />
+    <vehicle id="S_in_E_out_56" type="car" route="route_S_in_E_out" depart="269.22" />
+    <vehicle id="W_in_E_out_109" type="car" route="route_W_in_E_out" depart="269.25" />
+    <vehicle id="E_in_N_out_79" type="car" route="route_E_in_N_out" depart="271.76" />
+    <vehicle id="N_in_E_out_26" type="car" route="route_N_in_E_out" depart="272.50" />
+    <vehicle id="W_in_E_out_110" type="car" route="route_W_in_E_out" depart="274.76" />
+    <vehicle id="W_in_N_out_111" type="car" route="route_W_in_N_out" depart="278.11" />
+    <vehicle id="N_in_E_out_27" type="car" route="route_N_in_E_out" depart="283.43" />
+    <vehicle id="E_in_W_out_80" type="car" route="route_E_in_W_out" depart="283.81" />
+    <vehicle id="W_in_N_out_112" type="car" route="route_W_in_N_out" depart="284.11" />
+    <vehicle id="N_in_S_out_28" type="car" route="route_N_in_S_out" depart="284.54" />
+    <vehicle id="E_in_S_out_81" type="car" route="route_E_in_S_out" depart="284.94" />
+    <vehicle id="N_in_S_out_29" type="car" route="route_N_in_S_out" depart="285.10" />
+    <vehicle id="E_in_W_out_82" type="car" route="route_E_in_W_out" depart="289.58" />
+    <vehicle id="E_in_W_out_83" type="car" route="route_E_in_W_out" depart="290.08" />
+    <vehicle id="N_in_S_out_30" type="car" route="route_N_in_S_out" depart="291.01" />
+    <vehicle id="S_in_W_out_57" type="car" route="route_S_in_W_out" depart="293.84" />
+    <vehicle id="W_in_S_out_113" type="car" route="route_W_in_S_out" depart="296.07" />
+    <vehicle id="S_in_W_out_58" type="car" route="route_S_in_W_out" depart="296.32" />
+</routes>

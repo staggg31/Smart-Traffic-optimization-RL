@@ -7,7 +7,7 @@ controller algorithms, avoiding hardcoded junction identifiers or phase numbers.
 
 from dataclasses import dataclass, field
 import math
-from typing import List
+from typing import List, Optional
 
 
 @dataclass(frozen=True)
@@ -47,6 +47,7 @@ class IntersectionConfig:
     yellow_seconds: float = 0.0
     all_red_seconds: float = 0.0
     clearance_handled_by_sumo: bool = True
+    exit_lanes: Optional[List[str]] = None
 
     def __post_init__(self) -> None:
         """Validate configuration parameters upon instantiation."""
@@ -70,6 +71,16 @@ class IntersectionConfig:
                 raise ValueError("All entries in incoming_lanes must be non-empty strings.")
         if len(self.incoming_lanes) != len(set(self.incoming_lanes)):
             raise ValueError("incoming_lanes contains duplicate lane identifiers.")
+
+        # Validate exit lanes if provided
+        if self.exit_lanes is not None:
+            if not isinstance(self.exit_lanes, list) or len(self.exit_lanes) == 0:
+                raise ValueError("exit_lanes must be a non-empty list of lane IDs when provided.")
+            for lane in self.exit_lanes:
+                if not isinstance(lane, str) or not lane.strip():
+                    raise ValueError("All entries in exit_lanes must be non-empty strings.")
+            if len(self.exit_lanes) != len(set(self.exit_lanes)):
+                raise ValueError("exit_lanes contains duplicate lane identifiers.")
 
         # Validate green phase indices
         if not isinstance(self.green_phase_indices, list) or len(self.green_phase_indices) == 0:

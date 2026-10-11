@@ -278,10 +278,13 @@ class ObservationBuilder:
 
         vector = queues + counts + waits + speeds + one_hot + [elapsed, min_green_flag]
 
-        # Guard against float32 overflow
+        # Guard against non-finite values and float32 overflow
+        max_f32 = float(np.finfo(np.float32).max)
         for i, val in enumerate(vector):
-            if not math.isfinite(val):
-                raise ValueError(f"Feature at index {i} is not finite ({val!r}).")
+            if not math.isfinite(val) or abs(val) > max_f32:
+                raise ValueError(
+                    f"Feature at index {i} is not finite or exceeds float32 range ({val!r})."
+                )
 
         arr = np.array(vector, dtype=np.float32)
         if not np.all(np.isfinite(arr)):
